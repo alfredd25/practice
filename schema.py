@@ -1,8 +1,8 @@
 from pydantic import BaseModel
 
-class NoteBase(BaseModel):
+class NoteCreate(BaseModel):
   name: str
 
-class NoteResponse(NoteBase):
+class NoteResponse(BaseModel):
   id: int
   name: str
