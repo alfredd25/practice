@@ -1,5 +1,5 @@
 from fastapi import APIRouter , Path, Query, HTTPException, status
-from schema import NoteCreate, NoteResponse  
+from app.schemas.schema import NoteCreate, NoteResponse  
 
 router = APIRouter(prefix ="/notes", tags = ["Notes"])
 
