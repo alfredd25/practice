@@ -33,7 +33,7 @@ def read_note(note_id: int = Path(..., description="Id of the note in the db")):
 @router.delete("/{note_id}")
 def delete_note(note_id: int, user_email: str):
     for note in notes:
-        if note[id] == note_id:
+        if note["id"] == note_id:
             if note["creator_email"] != user_email:
                 raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="You do not have permission to delete this note")
 
